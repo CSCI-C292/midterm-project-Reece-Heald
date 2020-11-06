@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gunSound.wav-b74d893d94bfce575ffb636cb95b697a.sample"
+
+[deps]
+
+source_file="res://FOTD Assets/Sounds/bullet/gunSound.wav"
+dest_files=[ "res://.import/gunSound.wav-b74d893d94bfce575ffb636cb95b697a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

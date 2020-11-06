@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/walk.ogg-1a638acc958dfd41094f453a49f99bbd.oggstr"
+
+[deps]
+
+source_file="res://FOTD Assets/Sounds/Player/walk.ogg"
+dest_files=[ "res://.import/walk.ogg-1a638acc958dfd41094f453a49f99bbd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
