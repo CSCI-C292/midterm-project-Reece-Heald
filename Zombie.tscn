@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://FOTD Assets/PNG/Zombie/mob_5.png" type="Texture" id=1]
+[ext_resource path="res://Zombie.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.69168
+height = 30.653
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29.1049, 24.9102 )
+
+[node name="Zombie" type="KinematicBody2D"]
+self_modulate = Color( 1, 0.00392157, 0.00392157, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Zombie_Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 1.63699, 1.68985 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Attack_Box" type="CollisionShape2D" parent="."]
+position = Vector2( 8.73071, -0.396851 )
+scale = Vector2( 2.75954, 1 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Hit_Box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_Box"]
+shape = SubResource( 2 )
+[connection signal="timeout" from="Timer" to="." method="attack"]
+[connection signal="area_entered" from="Hit_Box" to="." method="bullet_hits"]

@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://FOTD Assets/PNG/Menus/WoodGamePanel/Wood_Game_Panel_FLAT.png" type="Texture" id=1]
+[ext_resource path="res://FOTD Assets/Deanna.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://FOTD Assets/PNG/Menus/settingbg.png" type="Texture" id=3]
+[ext_resource path="res://Credits.gd" type="Script" id=4]
+[ext_resource path="res://Menu.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = -0.793701
+margin_right = 1021.21
+margin_bottom = 601.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 315.381
+margin_top = 74.2063
+margin_right = 701.381
+margin_bottom = 260.206
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Figures of the Dead"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 400.0
+margin_top = 303.0
+margin_right = 622.0
+margin_bottom = 356.0
+custom_fonts/font = SubResource( 2 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 400.0
+margin_top = 369.225
+margin_right = 622.0
+margin_bottom = 422.225
+custom_fonts/font = SubResource( 2 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 401.122
+margin_top = 437.695
+margin_right = 623.122
+margin_bottom = 490.695
+custom_fonts/font = SubResource( 2 )
+text = "Quit"
+
+[node name="Credits" type="TextureRect" parent="."]
+visible = false
+margin_left = -390.643
+margin_top = -215.316
+margin_right = 1359.36
+margin_bottom = 772.684
+texture = ExtResource( 3 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Credits"]
+anchor_right = 0.32
+anchor_bottom = 0.264
+margin_left = 408.98
+margin_top = 290.326
+margin_right = 778.46
+margin_bottom = 546.998
+custom_fonts/font = SubResource( 3 )
+text = "Font
+https://www.1001fonts.com/deanna-font.html
+Map
+https://szadiart.itch.io/rogue-fantasy-catacombs
+inventory
+https://jehal.itch.io/24-survival-pixel-art-icons?download
+Zombie
+https://xl01.itch.io/5-different
+Player
+https://opengameart.org/content/animated-top-down-survivor-player
+Creator
+!Reece Heald!
+!Credits to Chabane!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Credits"]
+margin_left = 769.549
+margin_top = 718.617
+margin_right = 991.549
+margin_bottom = 771.617
+custom_fonts/font = SubResource( 2 )
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Credits/Button4" to="Credits" method="_on_Button4_pressed"]
