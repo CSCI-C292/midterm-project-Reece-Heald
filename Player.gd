@@ -105,10 +105,6 @@ func die ():
 func _ready ():
 	GameState.is_player_dead = false
 	ui.update_health_bar(curHp, max_health)
-	self.add_child(background);
-	background.stream = load("res://FOTD Assets/Sounds/Background sounds/background.wav");
-	background.volume_db = -10
-	background.play(true);
 	
 func set_fire_rate (amount):
 	fire_rate = amount

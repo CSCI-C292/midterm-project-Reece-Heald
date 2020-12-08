@@ -484,6 +484,9 @@ func _on_Timer_timeout():
 "
 
 [node name="Main" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
 
